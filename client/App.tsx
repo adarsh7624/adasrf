@@ -9,6 +9,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Admin from "./pages/Admin";
 import Categories from "./pages/Categories";
+import Browse from "./pages/Browse";
+import HowItWorks from "./pages/HowItWorks";
+import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
