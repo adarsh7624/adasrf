@@ -25,6 +25,7 @@ import {
   ShoppingCart,
   ArrowRight,
   Play,
+  Store,
 } from "lucide-react";
 
 export default function Index() {
