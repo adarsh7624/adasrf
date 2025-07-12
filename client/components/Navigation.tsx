@@ -72,14 +72,18 @@ export function Navigation() {
             <span className="text-xs">125</span>
           </Link>
           <div className="flex items-center space-x-2">
-            <Button variant="outline" size="sm">
-              <User className="h-4 w-4 mr-2" />
-              Sign In
-            </Button>
-            <Button size="sm" className="bg-green-600 hover:bg-green-700">
-              <Plus className="h-4 w-4 mr-2" />
-              List Item
-            </Button>
+            <Link to="/signin">
+              <Button variant="outline" size="sm">
+                <User className="h-4 w-4 mr-2" />
+                Sign In
+              </Button>
+            </Link>
+            <Link to="/list-item">
+              <Button size="sm" className="bg-green-600 hover:bg-green-700">
+                <Plus className="h-4 w-4 mr-2" />
+                List Item
+              </Button>
+            </Link>
           </div>
         </div>
 
