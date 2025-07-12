@@ -11,90 +11,73 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import {
   Search,
-  Shield,
-  CheckCircle,
-  Trash2,
-  Settings,
-  Star,
-  TrendingUp,
+  Recycle,
   Users,
-  Package,
-  Zap,
-  Globe,
+  Leaf,
   Heart,
-  ShoppingCart,
+  Star,
   ArrowRight,
   Play,
-  Store,
+  Coins,
+  RefreshCw,
+  Package,
+  Shirt,
+  CheckCircle,
+  Globe,
+  TrendingUp,
 } from "lucide-react";
 
 export default function Index() {
-  const categories = [
-    { name: "Electronics", count: "2.3k", color: "bg-blue-100 text-blue-700" },
-    { name: "Fashion", count: "1.8k", color: "bg-pink-100 text-pink-700" },
-    {
-      name: "Home & Garden",
-      count: "1.2k",
-      color: "bg-green-100 text-green-700",
-    },
-    { name: "Sports", count: "980", color: "bg-orange-100 text-orange-700" },
-    { name: "Books", count: "750", color: "bg-purple-100 text-purple-700" },
-    {
-      name: "Collectibles",
-      count: "420",
-      color: "bg-indigo-100 text-indigo-700",
-    },
-  ];
-
   const featuredItems = [
     {
       id: 1,
-      title: "Vintage Camera Collection",
-      price: "$299",
-      image: "/api/placeholder/300/200",
-      seller: "PhotoPro",
-      rating: 4.9,
-      likes: 24,
+      title: "Vintage Denim Jacket",
+      size: "M",
+      condition: "Excellent",
+      points: 15,
+      image: "/api/placeholder/300/300",
+      user: "Sarah_Fashion",
+      tags: ["vintage", "denim", "casual"],
     },
     {
       id: 2,
-      title: "Designer Watch",
-      price: "$899",
-      image: "/api/placeholder/300/200",
-      seller: "LuxuryTime",
-      rating: 4.8,
-      likes: 18,
+      title: "Designer Silk Scarf",
+      size: "One Size",
+      condition: "Like New",
+      points: 25,
+      image: "/api/placeholder/300/300",
+      user: "LuxStyle",
+      tags: ["designer", "silk", "accessories"],
     },
     {
       id: 3,
-      title: "Gaming Setup Bundle",
-      price: "$1,499",
-      image: "/api/placeholder/300/200",
-      seller: "GameZone",
-      rating: 5.0,
-      likes: 35,
+      title: "Wool Winter Coat",
+      size: "L",
+      condition: "Good",
+      points: 30,
+      image: "/api/placeholder/300/300",
+      user: "EcoFashion",
+      tags: ["wool", "winter", "coat"],
+    },
+    {
+      id: 4,
+      title: "Summer Floral Dress",
+      size: "S",
+      condition: "Excellent",
+      points: 20,
+      image: "/api/placeholder/300/300",
+      user: "VintageVibes",
+      tags: ["floral", "summer", "dress"],
     },
   ];
 
-  const adminFeatures = [
-    {
-      icon: <CheckCircle className="h-6 w-6 text-green-600" />,
-      title: "Moderate and approve/reject item listings",
-      description:
-        "Review all listings before they go live to ensure quality and compliance",
-    },
-    {
-      icon: <Trash2 className="h-6 w-6 text-red-600" />,
-      title: "Remove inappropriate or spam items",
-      description:
-        "Quickly identify and remove content that violates community guidelines",
-    },
-    {
-      icon: <Settings className="h-6 w-6 text-blue-600" />,
-      title: "Lightweight admin panel for oversight",
-      description:
-        "Simple, intuitive dashboard for managing platform operations",
-    },
+  const categories = [
+    { name: "Tops", count: "450", icon: "👕" },
+    { name: "Dresses", count: "320", icon: "👗" },
+    { name: "Outerwear", count: "280", icon: "🧥" },
+    { name: "Accessories", count: "190", icon: "👜" },
+    { name: "Shoes", count: "150", icon: "👠" },
+    { name: "Vintage", count: "120", icon: "✨" },
   ];
 
   return (
@@ -102,87 +85,74 @@ export default function Index() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-brand-50 via-white to-brand-100/50">
+      <section className="relative overflow-hidden bg-gradient-to-br from-green-50 via-white to-green-100/50">
         <div className="container py-20 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge className="bg-brand-100 text-brand-700 hover:bg-brand-200">
-                  🚀 Now with AI-powered moderation
+                <Badge className="bg-green-100 text-green-700 hover:bg-green-200">
+                  🌱 Sustainable Fashion Platform
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
-                  The{" "}
-                  <span className="bg-gradient-to-r from-brand-600 to-brand-700 bg-clip-text text-transparent">
-                    smartest
+                  <span className="bg-gradient-to-r from-green-600 to-emerald-700 bg-clip-text text-transparent">
+                    ReWear
                   </span>{" "}
-                  marketplace for everything
+                  Community Clothing Exchange
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-lg">
-                  Buy, sell, and discover unique items in a trusted community
-                  with advanced admin controls and quality assurance.
+                  Exchange unworn clothing through direct swaps or point-based
+                  redemption. Promote sustainable fashion in our
+                  community-driven marketplace.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-brand-500 hover:bg-brand-600 text-white"
+                  className="bg-green-600 hover:bg-green-700 text-white"
                 >
-                  Start Shopping
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <Package className="mr-2 h-4 w-4" />
+                  Browse Items
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-brand-200"
+                  className="border-green-200 hover:bg-green-50"
                 >
-                  <Play className="mr-2 h-4 w-4" />
-                  Watch Demo
+                  <Shirt className="mr-2 h-4 w-4" />
+                  List an Item
                 </Button>
               </div>
 
               <div className="flex items-center space-x-8 text-sm text-muted-foreground">
                 <div className="flex items-center space-x-2">
-                  <Users className="h-4 w-4" />
-                  <span>50k+ Users</span>
+                  <Users className="h-4 w-4 text-green-600" />
+                  <span>2.5k+ Members</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Package className="h-4 w-4" />
-                  <span>10k+ Items</span>
+                  <RefreshCw className="h-4 w-4 text-green-600" />
+                  <span>5k+ Swaps</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Star className="h-4 w-4" />
-                  <span>4.9 Rating</span>
+                  <Leaf className="h-4 w-4 text-green-600" />
+                  <span>Eco-Friendly</span>
                 </div>
               </div>
             </div>
 
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-500/20 to-brand-700/20 rounded-3xl blur-3xl"></div>
-              <div className="relative bg-white rounded-2xl shadow-2xl p-8 space-y-6">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-semibold text-lg">Quick Search</h3>
-                  <Badge className="bg-green-100 text-green-700">Live</Badge>
-                </div>
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                  <Input
-                    placeholder="Find anything..."
-                    className="pl-10 h-12 text-base"
-                  />
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  {categories.slice(0, 4).map((category, index) => (
-                    <div
-                      key={index}
-                      className="p-3 rounded-lg border border-gray-100 hover:border-brand-200 transition-colors cursor-pointer"
-                    >
-                      <div className="text-sm font-medium">{category.name}</div>
-                      <div className="text-xs text-muted-foreground">
-                        {category.count} items
-                      </div>
-                    </div>
-                  ))}
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-700/20 rounded-3xl blur-3xl"></div>
+              <div className="relative">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F09970117f6964c9d988fce7c27397ea5%2Fedeef69f9ad14a26a049d44c7ab9bbe0?format=webp&width=800"
+                  alt="ReWear Community Clothing Exchange"
+                  className="w-full rounded-2xl shadow-2xl"
+                />
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-3">
+                  <div className="flex items-center space-x-2 text-sm font-medium">
+                    <Recycle className="h-4 w-4 text-green-600" />
+                    <span>100% Sustainable</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -190,61 +160,72 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Admin Features Section */}
+      {/* How It Works */}
       <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center space-y-4 mb-16">
-            <Badge className="bg-brand-100 text-brand-700">
-              <Shield className="mr-2 h-4 w-4" />
-              Admin Controls
-            </Badge>
-            <h2 className="text-3xl lg:text-4xl font-bold">
-              Powerful Admin Role
-            </h2>
+            <h2 className="text-3xl lg:text-4xl font-bold">How ReWear Works</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive moderation tools to maintain a high-quality
-              marketplace environment
+              Simple steps to start your sustainable fashion journey
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {adminFeatures.map((feature, index) => (
-              <Card
-                key={index}
-                className="border-2 hover:border-brand-200 transition-colors"
-              >
-                <CardHeader>
-                  <div className="flex items-center space-x-3">
-                    <div className="p-2 rounded-lg bg-gray-50">
-                      {feature.icon}
-                    </div>
-                    <div>
-                      <CardTitle className="text-lg leading-tight">
-                        {feature.title}
-                      </CardTitle>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    {feature.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+            <Card className="text-center border-2 hover:border-green-200 transition-colors">
+              <CardHeader>
+                <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                  <Shirt className="h-8 w-8 text-green-600" />
+                </div>
+                <CardTitle>1. Upload Items</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  List your unworn clothes with photos, descriptions, and
+                  condition details
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-2 hover:border-green-200 transition-colors">
+              <CardHeader>
+                <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                  <RefreshCw className="h-8 w-8 text-green-600" />
+                </div>
+                <CardTitle>2. Swap or Redeem</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  Exchange directly with other users or use points to redeem
+                  items
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-2 hover:border-green-200 transition-colors">
+              <CardHeader>
+                <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                  <Leaf className="h-8 w-8 text-green-600" />
+                </div>
+                <CardTitle>3. Stay Sustainable</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  Build your wardrobe sustainably while earning points for every
+                  successful exchange
+                </CardDescription>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Categories Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Categories */}
+      <section className="py-20 bg-green-50/50">
         <div className="container">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold">
-              Popular Categories
-            </h2>
+            <h2 className="text-3xl lg:text-4xl font-bold">Shop by Category</h2>
             <p className="text-lg text-muted-foreground">
-              Discover items across all categories
+              Find exactly what you're looking for
             </p>
           </div>
 
@@ -252,15 +233,16 @@ export default function Index() {
             {categories.map((category, index) => (
               <Card
                 key={index}
-                className="hover:shadow-md transition-shadow cursor-pointer"
+                className="hover:shadow-md transition-shadow cursor-pointer group"
               >
                 <CardContent className="p-6 text-center">
-                  <div
-                    className={`inline-flex px-3 py-1 rounded-full text-sm font-medium ${category.color} mb-2`}
-                  >
-                    {category.count}
-                  </div>
-                  <h3 className="font-semibold">{category.name}</h3>
+                  <div className="text-3xl mb-3">{category.icon}</div>
+                  <h3 className="font-semibold mb-1 group-hover:text-green-600 transition-colors">
+                    {category.name}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {category.count} items
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -277,21 +259,23 @@ export default function Index() {
                 Featured Items
               </h2>
               <p className="text-lg text-muted-foreground">
-                Hand-picked items from trusted sellers
+                Popular items from our community
               </p>
             </div>
-            <Button variant="outline">View All</Button>
+            <Button variant="outline" className="border-green-200">
+              View All Items
+            </Button>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredItems.map((item) => (
               <Card
                 key={item.id}
                 className="group overflow-hidden hover:shadow-lg transition-shadow"
               >
-                <div className="aspect-[4/3] bg-gray-100 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-brand-100 to-brand-200 flex items-center justify-center">
-                    <Package className="h-16 w-16 text-brand-400" />
+                <div className="aspect-square bg-gray-100 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-100 to-emerald-200 flex items-center justify-center">
+                    <Shirt className="h-16 w-16 text-green-400" />
                   </div>
                   <Button
                     size="sm"
@@ -300,34 +284,48 @@ export default function Index() {
                   >
                     <Heart className="h-4 w-4" />
                   </Button>
+                  <Badge className="absolute top-3 left-3 bg-green-100 text-green-700">
+                    {item.condition}
+                  </Badge>
                 </div>
-                <CardContent className="p-6">
+                <CardContent className="p-4">
                   <div className="space-y-3">
-                    <div className="flex items-center justify-between">
+                    <div>
                       <h3 className="font-semibold line-clamp-1">
                         {item.title}
                       </h3>
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Heart className="h-3 w-3 mr-1" />
-                        {item.likes}
-                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        Size {item.size} • by @{item.user}
+                      </p>
                     </div>
                     <div className="flex items-center justify-between">
-                      <div className="text-2xl font-bold text-brand-600">
-                        {item.price}
+                      <div className="flex items-center text-green-600 font-semibold">
+                        <Coins className="h-4 w-4 mr-1" />
+                        {item.points} points
                       </div>
-                      <div className="flex items-center text-sm">
-                        <Star className="h-4 w-4 text-yellow-400 mr-1" />
-                        {item.rating}
+                      <div className="flex gap-1">
+                        {item.tags.slice(0, 2).map((tag, idx) => (
+                          <Badge
+                            key={idx}
+                            variant="secondary"
+                            className="text-xs"
+                          >
+                            {tag}
+                          </Badge>
+                        ))}
                       </div>
                     </div>
-                    <div className="text-sm text-muted-foreground">
-                      by {item.seller}
+                    <div className="grid grid-cols-2 gap-2">
+                      <Button size="sm" variant="outline" className="text-xs">
+                        Send Request
+                      </Button>
+                      <Button
+                        size="sm"
+                        className="bg-green-600 hover:bg-green-700 text-xs"
+                      >
+                        Redeem
+                      </Button>
                     </div>
-                    <Button className="w-full bg-brand-500 hover:bg-brand-600">
-                      <ShoppingCart className="mr-2 h-4 w-4" />
-                      Add to Cart
-                    </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -336,33 +334,68 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-brand-50">
+      {/* Stats & Impact */}
+      <section className="py-20 bg-green-600 text-white">
         <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              Our Environmental Impact
+            </h2>
+            <p className="text-lg text-green-100">
+              Together, we're making fashion more sustainable
+            </p>
+          </div>
+
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-brand-600 mb-2">
-                50k+
-              </div>
-              <div className="text-muted-foreground">Active Users</div>
+              <div className="text-3xl lg:text-4xl font-bold mb-2">5,247</div>
+              <div className="text-green-100">Items Exchanged</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-brand-600 mb-2">
-                10k+
+              <div className="text-3xl lg:text-4xl font-bold mb-2">
+                2.1 tons
               </div>
-              <div className="text-muted-foreground">Items Listed</div>
+              <div className="text-green-100">CO₂ Saved</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-brand-600 mb-2">
-                99.9%
-              </div>
-              <div className="text-muted-foreground">Uptime</div>
+              <div className="text-3xl lg:text-4xl font-bold mb-2">89%</div>
+              <div className="text-green-100">Satisfaction Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-brand-600 mb-2">
-                4.9
-              </div>
-              <div className="text-muted-foreground">User Rating</div>
+              <div className="text-3xl lg:text-4xl font-bold mb-2">2,543</div>
+              <div className="text-green-100">Active Members</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-green-50 to-emerald-50">
+        <div className="container text-center">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <h2 className="text-3xl lg:text-4xl font-bold">
+              Ready to Start Your Sustainable Fashion Journey?
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Join thousands of fashion lovers making a positive impact on the
+              environment
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-green-600 hover:bg-green-700 text-white"
+              >
+                <Users className="mr-2 h-4 w-4" />
+                Join Community
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-green-200 hover:bg-green-50"
+              >
+                <Play className="mr-2 h-4 w-4" />
+                Watch Demo
+              </Button>
             </div>
           </div>
         </div>
@@ -374,18 +407,17 @@ export default function Index() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center">
-                  <Store className="h-5 w-5 text-white" />
+                <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-green-500 to-emerald-700 flex items-center justify-center">
+                  <Recycle className="h-5 w-5 text-white" />
                 </div>
-                <span className="font-bold text-xl">MarketPlace</span>
+                <span className="font-bold text-xl">ReWear</span>
               </div>
               <p className="text-gray-400 mb-4">
-                The smartest marketplace for everything. Built for modern
-                commerce.
+                Sustainable fashion through community-driven clothing exchange.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Marketplace</h4>
+              <h4 className="font-semibold mb-4">Platform</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
@@ -394,17 +426,17 @@ export default function Index() {
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Categories
+                    List Items
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Sell Items
+                    How It Works
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Pricing
+                    Community
                   </a>
                 </li>
               </ul>
@@ -419,17 +451,17 @@ export default function Index() {
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
+                    Safety Guidelines
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
                     Contact Us
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Safety
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Community
+                    Sustainability
                   </a>
                 </li>
               </ul>
@@ -439,29 +471,30 @@ export default function Index() {
               <ul className="space-y-2 text-gray-400">
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    About
+                    About ReWear
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Careers
+                    Our Mission
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Press
+                    Impact Report
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Legal
+                    Privacy Policy
                   </a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            © 2024 MarketPlace. All rights reserved.
+            © 2024 ReWear. All rights reserved. • Making fashion sustainable,
+            one swap at a time.
           </div>
         </div>
       </footer>
