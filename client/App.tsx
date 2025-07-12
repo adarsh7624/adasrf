@@ -12,6 +12,9 @@ import Categories from "./pages/Categories";
 import Browse from "./pages/Browse";
 import HowItWorks from "./pages/HowItWorks";
 import Dashboard from "./pages/Dashboard";
+import Wishlist from "./pages/Wishlist";
+import SignIn from "./pages/SignIn";
+import ListItem from "./pages/ListItem";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
