@@ -7,11 +7,12 @@ import {
   Menu,
   X,
   User,
-  ShoppingCart,
+  Heart,
   Plus,
   Shield,
-  Store,
-  Heart,
+  Recycle,
+  Coins,
+  Package,
 } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Input } from "@/components/ui/input";
@@ -24,11 +25,11 @@ export function Navigation() {
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center">
-            <Store className="h-5 w-5 text-white" />
+          <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-green-500 to-emerald-700 flex items-center justify-center">
+            <Recycle className="h-5 w-5 text-white" />
           </div>
-          <span className="font-bold text-xl bg-gradient-to-r from-brand-600 to-brand-700 bg-clip-text text-transparent">
-            MarketPlace
+          <span className="font-bold text-xl bg-gradient-to-r from-green-600 to-emerald-700 bg-clip-text text-transparent">
+            ReWear
           </span>
         </Link>
 
@@ -37,7 +38,7 @@ export function Navigation() {
           <div className="relative w-full">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder="Search for items..."
+              placeholder="Search clothing items..."
               className="pl-10 pr-4 w-full"
             />
           </div>
@@ -46,16 +47,16 @@ export function Navigation() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           <Link
-            to="/categories"
+            to="/browse"
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
-            Categories
+            Browse Items
           </Link>
           <Link
-            to="/sell"
+            to="/how-it-works"
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
-            Sell
+            How It Works
           </Link>
           <Link
             to="/wishlist"
@@ -64,20 +65,18 @@ export function Navigation() {
             <Heart className="h-5 w-5" />
           </Link>
           <Link
-            to="/cart"
-            className="relative text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            to="/dashboard"
+            className="relative text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-1"
           >
-            <ShoppingCart className="h-5 w-5" />
-            <Badge className="absolute -top-2 -right-2 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs bg-brand-500">
-              3
-            </Badge>
+            <Coins className="h-5 w-5" />
+            <span className="text-xs">125</span>
           </Link>
           <div className="flex items-center space-x-2">
             <Button variant="outline" size="sm">
               <User className="h-4 w-4 mr-2" />
               Sign In
             </Button>
-            <Button size="sm" className="bg-brand-500 hover:bg-brand-600">
+            <Button size="sm" className="bg-green-600 hover:bg-green-700">
               <Plus className="h-4 w-4 mr-2" />
               List Item
             </Button>
@@ -101,11 +100,11 @@ export function Navigation() {
             </SheetTrigger>
             <SheetContent side="right" className="w-full sm:w-80">
               <div className="flex flex-col space-y-4 mt-6">
-                <Link to="/categories" className="text-lg font-medium">
-                  Categories
+                <Link to="/browse" className="text-lg font-medium">
+                  Browse Items
                 </Link>
-                <Link to="/sell" className="text-lg font-medium">
-                  Sell
+                <Link to="/how-it-works" className="text-lg font-medium">
+                  How It Works
                 </Link>
                 <Link
                   to="/wishlist"
@@ -115,18 +114,18 @@ export function Navigation() {
                   Wishlist
                 </Link>
                 <Link
-                  to="/cart"
+                  to="/dashboard"
                   className="text-lg font-medium flex items-center"
                 >
-                  <ShoppingCart className="h-5 w-5 mr-2" />
-                  Cart (3)
+                  <Coins className="h-5 w-5 mr-2" />
+                  Points (125)
                 </Link>
                 <div className="border-t pt-4 space-y-2">
                   <Button variant="outline" className="w-full">
                     <User className="h-4 w-4 mr-2" />
                     Sign In
                   </Button>
-                  <Button className="w-full bg-brand-500 hover:bg-brand-600">
+                  <Button className="w-full bg-green-600 hover:bg-green-700">
                     <Plus className="h-4 w-4 mr-2" />
                     List Item
                   </Button>
@@ -143,7 +142,7 @@ export function Navigation() {
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder="Search for items..."
+              placeholder="Search clothing items..."
               className="pl-10 pr-4 w-full"
               autoFocus
             />
