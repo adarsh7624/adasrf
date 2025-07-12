@@ -70,6 +70,39 @@ export default function Categories() {
           </p>
         </div>
 
+        {/* Featured Banner */}
+        <div className="mb-12">
+          <Card className="overflow-hidden bg-gradient-to-r from-brand-50 to-brand-100">
+            <CardContent className="p-0">
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="p-8 flex flex-col justify-center">
+                  <Badge className="bg-green-100 text-green-700 w-fit mb-4">
+                    🌱 Sustainable Shopping
+                  </Badge>
+                  <h2 className="text-2xl font-bold mb-4">
+                    ReWear - Community Clothing Exchange
+                  </h2>
+                  <p className="text-muted-foreground mb-6">
+                    Join our sustainable fashion community. Exchange, trade, and
+                    discover unique clothing items while reducing environmental
+                    impact.
+                  </p>
+                  <Button className="bg-brand-500 hover:bg-brand-600 w-fit">
+                    Explore ReWear
+                  </Button>
+                </div>
+                <div className="relative h-64 md:h-auto">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F09970117f6964c9d988fce7c27397ea5%2Fedeef69f9ad14a26a049d44c7ab9bbe0?format=webp&width=800"
+                    alt="ReWear Community Clothing Exchange"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category, index) => (
             <Card
