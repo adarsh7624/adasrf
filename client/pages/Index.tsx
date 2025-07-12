@@ -142,15 +142,37 @@ export default function Index() {
 
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-700/20 rounded-3xl blur-3xl"></div>
-              <div className="relative">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F09970117f6964c9d988fce7c27397ea5%2Fedeef69f9ad14a26a049d44c7ab9bbe0?format=webp&width=800"
-                  alt="ReWear Community Clothing Exchange"
-                  className="w-full rounded-2xl shadow-2xl"
-                />
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-3">
-                  <div className="flex items-center space-x-2 text-sm font-medium">
-                    <Recycle className="h-4 w-4 text-green-600" />
+              <div className="relative bg-white rounded-2xl shadow-2xl p-8 space-y-6">
+                <div className="flex items-center justify-between">
+                  <h3 className="font-semibold text-lg">Quick Search</h3>
+                  <Badge className="bg-green-100 text-green-700">Live</Badge>
+                </div>
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                  <Input
+                    placeholder="Find clothing items..."
+                    className="pl-10 h-12 text-base"
+                  />
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  {categories.slice(0, 4).map((category, index) => (
+                    <div
+                      key={index}
+                      className="p-3 rounded-lg border border-gray-100 hover:border-green-200 transition-colors cursor-pointer"
+                    >
+                      <div className="text-sm font-medium flex items-center">
+                        <span className="mr-2">{category.icon}</span>
+                        {category.name}
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        {category.count} items
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex items-center justify-center pt-4">
+                  <div className="flex items-center space-x-2 text-sm font-medium text-green-600">
+                    <Recycle className="h-4 w-4" />
                     <span>100% Sustainable</span>
                   </div>
                 </div>
