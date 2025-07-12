@@ -6,9 +6,9 @@
     "assets": [
       "dist/spa/*"
     ],
-    "scripts": [
-      "dist/server/**/*.js"
-    ]
+   "scripts": {
+  "dev": "vite"
+}
   },
   "scripts": {
     "dev": "vite",
