@@ -125,14 +125,18 @@ export function Navigation() {
                   Points (125)
                 </Link>
                 <div className="border-t pt-4 space-y-2">
-                  <Button variant="outline" className="w-full">
-                    <User className="h-4 w-4 mr-2" />
-                    Sign In
-                  </Button>
-                  <Button className="w-full bg-green-600 hover:bg-green-700">
-                    <Plus className="h-4 w-4 mr-2" />
-                    List Item
-                  </Button>
+                  <Link to="/signin">
+                    <Button variant="outline" className="w-full">
+                      <User className="h-4 w-4 mr-2" />
+                      Sign In
+                    </Button>
+                  </Link>
+                  <Link to="/list-item">
+                    <Button className="w-full bg-green-600 hover:bg-green-700">
+                      <Plus className="h-4 w-4 mr-2" />
+                      List Item
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </SheetContent>
